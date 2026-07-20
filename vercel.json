@@ -1,8 +1,8 @@
 {
-    "experimentalServices": {
+    "services": {
       "backend": {
         "runtime": "container",
-        "root": "backend"
+        "root": "backend/"
       }
     }
   }
