@@ -1,0 +1,19 @@
+{
+  "name": "nse-analytics-backend",
+  "version": "1.0.0",
+  "description": "Server-side proxy + analytics engine for the NSE Live Option Chain Analytics Dashboard. Handles NSE session cookies (bot-detection) and computes support/resistance boundary analytics.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

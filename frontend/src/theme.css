@@ -1,0 +1,95 @@
+:root {
+  /* Color tokens — deep indigo trading floor at dusk, not the default dark-mode black */
+  --bg: #0b0f1f;
+  --bg-grid: #0e1326;
+  --surface: #151b32;
+  --surface-alt: #1c2440;
+  --surface-raised: #212a4a;
+  --border: #2b3358;
+  --border-soft: #202844;
+
+  --text: #edf0f8;
+  --text-muted: #8a92b3;
+  --text-faint: #5c6389;
+
+  --call: #3ddc97; /* bullish / call teal-green */
+  --call-dim: #1f4d3d;
+  --put: #ff6b5e; /* bearish / put coral */
+  --put-dim: #522a29;
+  --brand: #f2a93b; /* marigold — signal accent, not terracotta */
+  --brand-dim: #4a3820;
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-data: 'IBM Plex Mono', 'SFMono-Regular', monospace;
+
+  --radius: 10px;
+  --radius-sm: 6px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(242, 169, 59, 0.06), transparent 40%),
+    radial-gradient(circle at 85% 10%, rgba(61, 220, 151, 0.05), transparent 45%),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+select,
+input {
+  font-family: inherit;
+}
+
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.mono {
+  font-family: var(--font-data);
+  font-variant-numeric: tabular-nums;
+}
+
+.up {
+  color: var(--call);
+}
+
+.down {
+  color: var(--put);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
