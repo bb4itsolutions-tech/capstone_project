@@ -1,0 +1,8 @@
+{
+    "services": {
+      "backend": {
+        "runtime": "container",
+        "root": "backend/"
+      }
+    }
+  }
